@@ -1,5 +1,8 @@
 package com;
 
+import com.graphic_panel.GraphicPanel;
+import com.other_package.ImageLoader;
+import com.other_package.Spritesheet;
 import com.window_panel.MenuPanel;
 
 import javax.swing.*;

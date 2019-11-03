@@ -1,9 +1,8 @@
-package com.graphic_object;
+package com.graphic_panel;
 
 
 import com.MainWindow;
 import com.window_panel.MenuPanel;
-import com.window_panel.WorldEditMenu;
 
 import java.awt.*;
 

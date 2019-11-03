@@ -1,4 +1,4 @@
-package com.graphic_object;
+package com.graphic_panel;
 
 import java.awt.*;
 

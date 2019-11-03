@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6aa736-1de6-42e3-9d18-162c41a03d27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/GraphicPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/GraphicPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/GraphicStateManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/Playstate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/Playstate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_object/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_object/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/tests/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Playstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Playstate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GraphicPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/GraphicPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GraphicStateManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/other_package/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Playstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Spritesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/other_package/Spritesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_object/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_object/GraphicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/GraphicObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_object/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_object/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic/Calculator.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +67,7 @@
       <module name="apa_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="com.other_package.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

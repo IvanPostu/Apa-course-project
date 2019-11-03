@@ -1,4 +1,4 @@
-package com;
+package com.graphic_panel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,15 +8,13 @@ import java.awt.image.VolatileImage;
 public class GraphicPanel extends JPanel implements  ComponentListener, ActionListener, KeyListener, MouseListener  {
 
     public static final float SCALE = 1.f;
-    //public static final int DIST_FROM_00 = 3*MainWindow.BLOCKSIZE;
 
     public static int width;
     public static int height;
 
     private Timer timer;
     private VolatileImage image;
-    private GraphicStateManager gsm;
-
+    private Playstate playstate;
 
     public GraphicPanel(int x, int y, int width, int height) {
         super();
@@ -33,7 +31,8 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
         GraphicPanel.width = getPreferredSize().width;
         GraphicPanel.height = getPreferredSize().height;
 
-        this.gsm = new GraphicStateManager(GraphicStateManager.PLAYSTATE);
+        playstate = new Playstate();
+
     }
 
     @Override
@@ -44,8 +43,8 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
         this.timer.start();
     }
 
-    public void update(){
-        gsm.update();
+    private void update(){
+        playstate.update();
     }
 
     @Override
@@ -62,7 +61,7 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
         g2.setBackground(new Color(146, 189, 221));
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING	, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-        gsm.render(g2);
+        playstate.render(g2);
         g.drawImage(this.image.getScaledInstance(width, height, Image.SCALE_FAST),
                 0, 0, null
         );
@@ -77,12 +76,12 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
 
     @Override
     public void mousePressed(MouseEvent mouseEvent) {
-        gsm.mousePressed(mouseEvent);
+        playstate.mousePressed(mouseEvent);
     }
 
     @Override
     public void mouseReleased(MouseEvent mouseEvent) {
-        gsm.mouseReleased(mouseEvent);
+        playstate.mouseReleased(mouseEvent);
     }
 
     @Override
@@ -102,13 +101,13 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
 
     @Override
     public void keyPressed(KeyEvent e) {
-        gsm.keyPressed(e, e.getKeyCode());
+        playstate.keyPressed(e, e.getKeyCode());
 
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        gsm.keyReleased(e, e.getKeyCode());
+        playstate.keyReleased(e, e.getKeyCode());
     }
 
     @Override

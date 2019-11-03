@@ -1,7 +1,7 @@
-package com;
+package com.graphic_panel;
 
-import com.graphic_object.World;
-import com.logic.Calculator;
+import com.MainWindow;
+import com.logic_package.Calculator;
 import com.window_panel.MenuPanel;
 
 
@@ -10,26 +10,23 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 
-public class Playstate extends State {
+public class Playstate {
 
 
   World world;
+  Calculator calculator;
 
 
-
-  public Playstate(GraphicStateManager gsm) {
-    super(gsm);
+  public Playstate() {
     world = new World();
-
+    calculator = new Calculator();
 
   }
 
-  @Override
   public void update() {
 
   }
 
-  @Override
   public void render(Graphics2D g) {
     g.clearRect(0, 0, GraphicPanel.width, GraphicPanel.height);
     world.render(g);
@@ -39,7 +36,7 @@ public class Playstate extends State {
     g.setFont(font);
     for (int k = 0; k < World.BLOCKS; k++) {
       g.drawString(String.format("%d",k),
-              World.DIST_TO_00-MainWindow.BLOCKSIZE,
+              World.DIST_TO_00- MainWindow.BLOCKSIZE,
               World.DIST_TO_00+MainWindow.BLOCKSIZE+k*MainWindow.BLOCKSIZE-4
       );
 
@@ -50,12 +47,10 @@ public class Playstate extends State {
       );
     }
     //====================
-    Calculator.draw(g);
-
+    calculator.draw(g);
 
   }
 
-  @Override
   public void keyPressed(KeyEvent e, int k) {
     switch(k){
       case KeyEvent.VK_UP:
@@ -74,12 +69,10 @@ public class Playstate extends State {
     }
   }
 
-  @Override
   public void keyReleased(KeyEvent e, int k) {
 
   }
 
-  @Override
   public void mousePressed(MouseEvent e) {
 
     int x = e.getX();
@@ -102,7 +95,6 @@ public class Playstate extends State {
 
   }
 
-  @Override
   public void mouseReleased(MouseEvent e) {
 
   }
