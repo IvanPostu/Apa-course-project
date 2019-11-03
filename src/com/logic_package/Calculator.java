@@ -46,7 +46,8 @@ public class Calculator {
     }
     MenuPanel.println("Places for boxes:");
     for(Block a : placesForBoxes){
-      MenuPanel.println(String.format("x=%d , y=%d", a.getX(), a.getY()));
+      Point p = a.arrPos();
+      MenuPanel.println(String.format("ix=%d, iy=%d, x=%d, y=%d", p.x, p.y, a.getX(), a.getY()));
     }
 
     //=======
