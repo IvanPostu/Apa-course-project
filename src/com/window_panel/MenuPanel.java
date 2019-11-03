@@ -25,20 +25,11 @@ public class MenuPanel extends JPanel {
     runButton.setBounds(75, 525, 50, 35);
     runButton.setBackground(Color.green);
     runButton.setBorder(BorderFactory.createLineBorder(Color.darkGray));
-    runButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        MenuPanel.println("run button has been clicked");
-        //Calculator.calculate();
-      }
-    });
 
     add(runButton);
 
 
-    //add border
-    Border border = BorderFactory.createLineBorder(Color.red);
-    setBorder(border);
+    setBorder(BorderFactory.createLineBorder(Color.black));
 
   }
 
@@ -46,4 +37,7 @@ public class MenuPanel extends JPanel {
     if(worldEditMenu!=null) worldEditMenu.println(s);
   }
 
+  public JButton getRunButton() {
+    return runButton;
+  }
 }

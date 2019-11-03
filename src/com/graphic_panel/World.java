@@ -39,7 +39,7 @@ public class World {
 
     }
 
-    private Block getBlock(int x, int y){
+    public Block getBlock(int x, int y){
 
         for (int i = 0; i < BLOCKS; i++) {
             for (int j = 0; j < BLOCKS; j++) {
@@ -60,6 +60,8 @@ public class World {
         MenuPanel.println(s);
 
         Block block = getBlock(x, y);
+        if(block.getMaterial()==Material.ROBOT) return;
+
         if(MenuPanel.worldEditMenu.isAddWall()){
             block.setMaterial(Material.WALL);
         }else if(MenuPanel.worldEditMenu.isAddSpace()){
@@ -83,4 +85,7 @@ public class World {
 
     }
 
+    public Block[][] getBlocks() {
+        return blocks;
+    }
 }

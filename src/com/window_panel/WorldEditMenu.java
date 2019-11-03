@@ -36,7 +36,7 @@ public class WorldEditMenu extends JPanel {
         addSpace = new JCheckBox("Add Space");
         addSpace.setBounds(100, 10+20, 95, 20);
         addSpace.setBackground(Color.gray);
-        addSpace.setSelected(true);
+        addSpace.setSelected(false);
         addSpace.addItemListener((ItemEvent e)->checkboxClickListener(e));
         add(addSpace);
 
@@ -57,7 +57,7 @@ public class WorldEditMenu extends JPanel {
         addRobot = new JCheckBox("Add Robot");
         addRobot.setBounds(5, 10+20+25+25, 95, 20);
         addRobot.setBackground(Color.gray);
-        addRobot.setSelected(false);
+        addRobot.setSelected(true);
         addRobot.addItemListener((ItemEvent e)->checkboxClickListener(e));
         add(addRobot);
 

@@ -2,30 +2,40 @@ package com.graphic_panel;
 
 
 
+import com.MainWindow;
+
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 public class Block extends GraphicObject {
 
-    private Material material;
+  private Material material;
 
-    public Block(Material material, int x, int y, int width, int height) {
-        super(x, y, width, height);
-        this.material = material;
-    }
+  public Block(Material material, int x, int y, int width, int height) {
+    super(x, y, width, height);
+    this.material = material;
+  }
 
-    public void update(){
+  public void update(){
 
-    }
+  }
 
-    public void render(Graphics2D g){
-        g.drawImage(this.material.getTexture(), (int)x, (int)y, null);
-    }
+  public Point arrPos(){
+    int x = (this.getX() - World.DIST_TO_00) / MainWindow.BLOCKSIZE;
+    int y = (this.getY() - World.DIST_TO_00) / MainWindow.BLOCKSIZE;
 
-    public void setMaterial(Material material) {
-        this.material = material;
-    }
+    return new Point(x, y);
+  }
 
-    public Material getMaterial() {
-        return material;
-    }
+  public void render(Graphics2D g){
+    g.drawImage(this.material.getTexture(), x, y, null);
+  }
+
+  public void setMaterial(Material material) {
+    this.material = material;
+  }
+
+  public Material getMaterial() {
+    return material;
+  }
 }
