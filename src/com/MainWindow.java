@@ -14,6 +14,7 @@ public class MainWindow extends JFrame {
             "img/blocks.png"),16, 16, 5
     );
     public static final int BLOCKSIZE = 16;
+
     public static MenuPanel menuPanel;
 
 
