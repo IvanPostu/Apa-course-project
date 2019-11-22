@@ -11,6 +11,7 @@ public class MenuPanel extends JPanel {
   public static WorldEditMenu worldEditMenu;
 
   private JButton runButton;
+  private JButton clearButton;
 
   public MenuPanel(int x, int y, int width, int height) {
     super();
@@ -22,11 +23,17 @@ public class MenuPanel extends JPanel {
     add(worldEditMenu);
 
     runButton = new JButton("Run");
-    runButton.setBounds(75, 525, 50, 35);
+    runButton.setBounds(55, 525, 50, 35);
     runButton.setBackground(Color.green);
     runButton.setBorder(BorderFactory.createLineBorder(Color.darkGray));
 
+    clearButton = new JButton("Clear");
+    clearButton.setBounds(110, 525, 40, 35);
+    clearButton.setBackground(Color.red);
+    clearButton.setBorder(BorderFactory.createLineBorder(Color.darkGray));
+
     add(runButton);
+    add(clearButton);
 
 
     setBorder(BorderFactory.createLineBorder(Color.black));
@@ -39,5 +46,9 @@ public class MenuPanel extends JPanel {
 
   public JButton getRunButton() {
     return runButton;
+  }
+
+  public JButton getClearButton() {
+    return clearButton;
   }
 }

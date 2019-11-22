@@ -27,6 +27,7 @@ public class Block extends GraphicObject {
     return new Point(x, y);
   }
 
+
   public void render(Graphics2D g){
     g.drawImage(this.material.getTexture(), x, y, null);
   }

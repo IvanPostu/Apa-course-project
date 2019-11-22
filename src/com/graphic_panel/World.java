@@ -71,8 +71,13 @@ public class World {
         }else if(MenuPanel.worldEditMenu.isAddBoxPlace()){
             block.setMaterial(Material.POS_FOR_BOX);
         }else if(MenuPanel.worldEditMenu.isAddRobot()){
+
+            //TO DO: Swap robot and other block...
+
             int tempX = robot.getX();
             int tempY = robot.getY();
+            Point robotPos = robot.arrPos();
+            Point blockPos = block.arrPos();
 
             robot.setX(block.getX());
             robot.setY(block.getY());
@@ -81,11 +86,18 @@ public class World {
             block.setY(tempY);
 
 
+            blocks[robotPos.x][robotPos.y] = block;
+            blocks[blockPos.x][blockPos.y] = robot;
+
         }
 
     }
 
     public Block[][] getBlocks() {
         return blocks;
+    }
+
+    public Block getRobot() {
+        return robot;
     }
 }

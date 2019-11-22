@@ -37,6 +37,19 @@ public class Playstate {
     });
 
 
+    JButton clearBtn =  MainWindow.menuPanel.getClearButton();
+    clearBtn.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        try {
+          calculator.clear(world);
+        } catch (Exception ex) {
+          MenuPanel.println(ex.getMessage());
+        }
+      }
+    });
+
+
   }
 
   public void update() {

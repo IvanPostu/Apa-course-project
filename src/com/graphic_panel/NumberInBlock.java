@@ -10,7 +10,7 @@ public class NumberInBlock {
   private int n;
 
   public NumberInBlock(int ix, int iy, int n) {
-    this.x = World.DIST_TO_00 + 1 + (ix*MainWindow.BLOCKSIZE);
+    this.x = World.DIST_TO_00 + (ix*MainWindow.BLOCKSIZE);
     this.y = World.DIST_TO_00 + 14 + (iy*MainWindow.BLOCKSIZE);
     this.n = n;
   }
@@ -40,7 +40,7 @@ public class NumberInBlock {
   }
 
   public void render(Graphics2D g) {
-    Font font = new Font("TimesRoman", Font.ITALIC, 8);
+    Font font = new Font("TimesRoman", Font.ITALIC, 9);
     g.setFont(font);
     g.drawString(String.format("%d", this.n), this.x, this.y);
 

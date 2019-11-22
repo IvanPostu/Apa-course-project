@@ -4,60 +4,67 @@ import com.graphic_panel.Block;
 import com.graphic_panel.Material;
 import com.graphic_panel.NumberInBlock;
 import com.graphic_panel.World;
-import com.window_panel.MenuPanel;
 
 import java.awt.*;
 import java.util.ArrayList;
-
+import java.util.List;
 
 public class Calculator {
 
-  ArrayList<Block> boxes;
-  ArrayList<Block> placesForBoxes;
-  ArrayList<NumberInBlock> testNumbers;
+  List<NumberInBlock> testNumbers;
 
 
   public Calculator() {
-    boxes = new ArrayList<>();
-    placesForBoxes = new ArrayList<>();
     testNumbers = new ArrayList<>();
 
-    //testNumbers.add(new NumberInBlock(32+7,32+14,5));
-    testNumbers.add(new NumberInBlock(0,0,5));
+    /*testNumbers.add(new NumberInBlock(0,0,5));
     testNumbers.add(new NumberInBlock(3,3,215));
-    testNumbers.add(new NumberInBlock(5,2,25));
+    testNumbers.add(new NumberInBlock(5,2,25));*/
   }
 
   public void calculate(World world)throws Exception{
 
-    boxes.clear();
-    placesForBoxes.clear();
+    testNumbers.clear();
 
-    Block[][] block = world.getBlocks();
+    Block[][] blocks = world.getBlocks();
+    Block robot = world.getRobot();
 
-    for(int i=0; i<block.length; i++){
-      for(int k=0; k<block[0].length; k++){
-        if(block[i][k].getMaterial()== Material.BOX)
-          boxes.add(block[i][k]);
-        else if (block[i][k].getMaterial()== Material.POS_FOR_BOX)
-          placesForBoxes.add(block[i][k]);
+    int [][] ponderi  = new int[blocks.length][blocks[0].length];
+    for(int i=0; i<blocks.length; i++){
+      for(int k=0; k<blocks[0].length; k++){
+        ponderi[i][k] = SearchPathWorkerImpl.INVIS_VAL_FOR_PATH;
       }
     }
 
-    //TO DO test
+    SearchPathWorker searchEngine = new SearchPathWorkerImpl();
+    searchEngine.findFirstObject(world, ponderi,0, robot.arrPos().x, robot.arrPos().y, Material.BOX);
+//    searchEngine.findFirstObject(world, ponderi,10, robot.arrPos().x+1, robot.arrPos().y, Material.BOX);
+//    ponderi[1][1] = 22;
 
-    MenuPanel.println("Boxes:");
-    for(Block a : boxes){
-      Point p = a.arrPos();
-      MenuPanel.println(String.format("ix=%d, iy=%d, x=%d, y=%d", p.x, p.y, a.getX(), a.getY()));
-    }
-    MenuPanel.println("Places for boxes:");
-    for(Block a : placesForBoxes){
-      Point p = a.arrPos();
-      MenuPanel.println(String.format("ix=%d, iy=%d, x=%d, y=%d", p.x, p.y, a.getX(), a.getY()));
+    for(int i=0; i<blocks.length; i++){
+      for(int k=0; k<blocks[0].length; k++){
+        if(ponderi[i][k]!=SearchPathWorkerImpl.INVIS_VAL_FOR_PATH){
+          testNumbers.add(new NumberInBlock(i,k,ponderi[i][k]));
+        }
+      }
     }
 
-    //=======
+
+  }
+
+
+  public void clear(World world)throws Exception{
+    Block blocks[][] = world.getBlocks();
+
+    for(int i=0; i<blocks.length; i++){
+      for(int k=0; k<blocks[0].length; k++){
+        if(blocks[i][k].getMaterial()!=Material.ROBOT)
+          blocks[i][k].setMaterial(Material.AIR);
+      }
+    }
+
+    testNumbers.clear();
+
 
 
   }
