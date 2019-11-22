@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6aa736-1de6-42e3-9d18-162c41a03d27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/NumberInBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/NumberInBlock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/Playstate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/Playstate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/MenuPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/NumberInBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/NumberInBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../webapp" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

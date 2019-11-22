@@ -26,60 +26,72 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
     ponderi[getX][getY] = getPondere;
 
     //full right
-    if(getX<maxX-1){
-      if(ponderi[getX+1][getY] > getPondere + PONDERE_DIR){
-        ponderi[getX+1][getY] = getPondere + PONDERE_DIR;
-        findFirstObject(world, ponderi,getPondere + PONDERE_DIR, getX+1, getY, object);
-      }
-      if(getY<maxY-1){
-        if(ponderi[getX+1][getY+1] > getPondere + PONDERE_COLT){
-          ponderi[getX+1][getY+1] = getPondere + PONDERE_COLT;
-          findFirstObject(world, ponderi,getPondere + PONDERE_COLT, getX+1, getY+1, object);
+    if (getX < maxX - 1) {
+      if (ponderi[getX + 1][getY] > getPondere + PONDERE_DIR) {
+        if (blocks[getX + 1][getY].getMaterial() != Material.WALL) {
+          ponderi[getX + 1][getY] = getPondere + PONDERE_DIR;
+          findFirstObject(world, ponderi, getPondere + PONDERE_DIR, getX + 1, getY, object);
         }
       }
-      if(getY>0){
-        if(ponderi[getX+1][getY-1] > getPondere + PONDERE_COLT){
-          ponderi[getX+1][getY-1] = getPondere + PONDERE_COLT;
-          findFirstObject(world, ponderi,getPondere + PONDERE_COLT, getX+1, getY-1, object);
+      if (getY < maxY - 1) {
+        if (ponderi[getX + 1][getY + 1] > getPondere + PONDERE_COLT) {
+          if (blocks[getX + 1][getY + 1].getMaterial() != Material.WALL) {
+            ponderi[getX + 1][getY + 1] = getPondere + PONDERE_COLT;
+            findFirstObject(world, ponderi, getPondere + PONDERE_COLT, getX + 1, getY + 1, object);
+          }
+        }
+      }
+      if (getY > 0) {
+        if (ponderi[getX + 1][getY - 1] > getPondere + PONDERE_COLT) {
+          if (blocks[getX + 1][getY - 1].getMaterial() != Material.WALL) {
+            ponderi[getX + 1][getY - 1] = getPondere + PONDERE_COLT;
+            findFirstObject(world, ponderi, getPondere + PONDERE_COLT, getX + 1, getY - 1, object);
+          }
         }
       }
     }
     //full left
-    if(getX>0){
-      if(ponderi[getX-1][getY] > getPondere + PONDERE_DIR){
-        ponderi[getX-1][getY] = getPondere + PONDERE_DIR;
-        findFirstObject(world, ponderi,getPondere + PONDERE_DIR, getX-1, getY, object);
-      }
-      if(getY<maxY-1){
-        if(ponderi[getX-1][getY+1] > getPondere + PONDERE_COLT){
-          ponderi[getX-1][getY+1] = getPondere + PONDERE_COLT;
-          findFirstObject(world, ponderi,getPondere + PONDERE_COLT, getX-1, getY+1, object);
+    if (getX > 0) {
+      if (ponderi[getX - 1][getY] > getPondere + PONDERE_DIR) {
+        if (blocks[getX - 1][getY].getMaterial() != Material.WALL) {
+          ponderi[getX - 1][getY] = getPondere + PONDERE_DIR;
+          findFirstObject(world, ponderi, getPondere + PONDERE_DIR, getX - 1, getY, object);
         }
       }
-      if(getY>0){
-        if(ponderi[getX-1][getY-1] > getPondere + PONDERE_COLT){
-          ponderi[getX-1][getY-1] = getPondere + PONDERE_COLT;
-          findFirstObject(world, ponderi,getPondere + PONDERE_COLT, getX-1, getY-1, object);
+      if (getY < maxY - 1) {
+        if (ponderi[getX - 1][getY + 1] > getPondere + PONDERE_COLT) {
+          if (blocks[getX - 1][getY + 1].getMaterial() != Material.WALL) {
+            ponderi[getX - 1][getY + 1] = getPondere + PONDERE_COLT;
+            findFirstObject(world, ponderi, getPondere + PONDERE_COLT, getX - 1, getY + 1, object);
+          }
+        }
+      }
+      if (getY > 0) {
+        if (ponderi[getX - 1][getY - 1] > getPondere + PONDERE_COLT) {
+          if (blocks[getX - 1][getY - 1].getMaterial() != Material.WALL) {
+            ponderi[getX - 1][getY - 1] = getPondere + PONDERE_COLT;
+            findFirstObject(world, ponderi, getPondere + PONDERE_COLT, getX - 1, getY - 1, object);
+          }
         }
       }
     }
 
     //top and bottom
-    if(getY<maxY-1 && ponderi[getX][getY+1] > getPondere + PONDERE_DIR){
-      ponderi[getX][getY+1] = getPondere + PONDERE_DIR;
-      findFirstObject(world, ponderi,getPondere + PONDERE_DIR, getX, getY+1, object);
+    if (getY < maxY - 1 && ponderi[getX][getY + 1] > getPondere + PONDERE_DIR) {
+      if (blocks[getX][getY + 1].getMaterial() != Material.WALL) {
+        ponderi[getX][getY + 1] = getPondere + PONDERE_DIR;
+        findFirstObject(world, ponderi, getPondere + PONDERE_DIR, getX, getY + 1, object);
+      }
     }
-    if(getY>0 && ponderi[getX][getY-1] > getPondere + PONDERE_DIR){
-      ponderi[getX][getY-1] = getPondere + PONDERE_DIR;
-      findFirstObject(world, ponderi,getPondere + PONDERE_DIR, getX, getY-1, object);
+    if (getY > 0 && ponderi[getX][getY - 1] > getPondere + PONDERE_DIR) {
+      if (blocks[getX][getY - 1].getMaterial() != Material.WALL) {
+        ponderi[getX][getY - 1] = getPondere + PONDERE_DIR;
+        findFirstObject(world, ponderi, getPondere + PONDERE_DIR, getX, getY - 1, object);
+      }
     }
-
 
 
   }
-
-
-
 
 
 }
