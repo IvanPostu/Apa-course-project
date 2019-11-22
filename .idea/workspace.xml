@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6aa736-1de6-42e3-9d18-162c41a03d27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/graphic_panel/NumberInBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/NumberInBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/NumberInBlock.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +28,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webapp" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
