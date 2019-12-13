@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f6aa736-1de6-42e3-9d18-162c41a03d27" name="Default Changelist" comment="">
+    <list default="true" id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/META-INF/apa_project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worlds/w1.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,27 +21,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1T7L8sVu9wOAiTbs27iLgc99d5w" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webapp" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="ProjectId" id="1UwQ6s4KoJAuRrnkEY3W3PlGOVy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -51,7 +44,7 @@
       <module name="apa_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.other_package.*" />
+          <option name="PATTERN" value="com.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,11 +63,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f6aa736-1de6-42e3-9d18-162c41a03d27" name="Default Changelist" comment="" />
-      <created>1572806030149</created>
+      <changelist id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="" />
+      <created>1576265005126</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572806030149</updated>
+      <updated>1576265005126</updated>
     </task>
     <servers />
   </component>
@@ -83,9 +76,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
