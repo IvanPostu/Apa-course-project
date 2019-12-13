@@ -50,7 +50,7 @@ public class WorldEditMenu extends JPanel {
 
     addBoxPlace = new JCheckBox("Add Box Place");
     addBoxPlace.setBounds(100, 10+20+25, 95, 20);
-    addBoxPlace.setBackground(Color.gray);
+    addBoxPlace.setBackground(Color.red);
     addBoxPlace.setSelected(false);
     addBoxPlace.addItemListener((ItemEvent e)->checkboxClickListener(e));
     add(addBoxPlace);

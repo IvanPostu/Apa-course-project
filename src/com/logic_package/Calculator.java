@@ -1,12 +1,13 @@
 package com.logic_package;
 
-import com.graphic_panel.Block;
-import com.graphic_panel.Material;
-import com.graphic_panel.NumberInBlock;
-import com.graphic_panel.World;
+import com.graphic_panel.*;
+import com.window_panel.MenuPanel;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Calculator {
@@ -28,6 +29,9 @@ public class Calculator {
 
     Block[][] blocks = world.getBlocks();
     Block robot = world.getRobot();
+    List<Block> pPoints = new ArrayList<>();
+
+
 
     int [][] ponderi  = new int[blocks.length][blocks[0].length];
     for(int i=0; i<blocks.length; i++){
@@ -37,9 +41,22 @@ public class Calculator {
     }
 
     SearchPathWorker searchEngine = new SearchPathWorkerImpl();
-    searchEngine.findFirstObject(world, ponderi,0, robot.arrPos().x, robot.arrPos().y, Material.BOX);
-//    searchEngine.findFirstObject(world, ponderi,10, robot.arrPos().x+1, robot.arrPos().y, Material.BOX);
-//    ponderi[1][1] = 22;
+    searchEngine.findFirstObject(world, ponderi,0, robot.arrPos().x,
+            robot.arrPos().y, Material.BOX);
+
+    for(int i=0; i<blocks.length; i++){
+      for(int k=0; k<blocks[0].length; k++){
+        if(blocks[i][k].getMaterial()==Material.BOX
+                && ponderi[i][k]!=SearchPathWorkerImpl.INVIS_VAL_FOR_PATH)
+          pPoints.add(blocks[i][k]);
+      }
+    }
+
+
+    pPoints.forEach(a->{
+      MenuPanel.println(Integer.toString(a.arrPos().x)+" "+Integer.toString(a.arrPos().y));
+    });
+
 
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
@@ -74,5 +91,12 @@ public class Calculator {
     if(testNumbers!=null) {
       for (NumberInBlock n : testNumbers) n.render(g);
     }
+
+    double radius = 2.;
+
+    Circle circle = new Circle(1, 1);
+
+    circle.draw(g);
+
   }
 }

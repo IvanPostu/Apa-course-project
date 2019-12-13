@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/graphic_panel/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/META-INF/apa_project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/graphic_panel/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/WorldEditMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/window_panel/WorldEditMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worlds/w1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +18,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UwQ6s4KoJAuRrnkEY3W3PlGOVy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>

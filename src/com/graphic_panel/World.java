@@ -57,7 +57,7 @@ public class World {
     public void worldMouseKeyPresed(int x, int y){
         String s  = String.format("x=%d, y=%d", x, y);
 
-        MenuPanel.println(s);
+//        MenuPanel.println(s);
 
         Block block = getBlock(x, y);
         if(block.getMaterial()==Material.ROBOT) return;
