@@ -6,7 +6,7 @@ import com.graphic_panel.World;
 import com.window_panel.MenuPanel;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 
 public class SearchPathWorkerImpl implements SearchPathWorker {
   
@@ -98,30 +98,29 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
   }
   
   @Override
-  public void connectTransitPoints(final ArrayList<Block> arr, int index) {
-    if(index == arr.size())  {
+  public void connectTransitPoints(final ArrayList<Block> arr, ArrayList<Block> dynamic,
+                                     List<List<Block>> result, int index) {
+  
     
-    }
     
   }
   
   @Override
-  public void recursTest(final ArrayList<Integer>arr, ArrayList<Integer>result, int index) {
+  public void recursTest(final ArrayList<Integer>arr, ArrayList<Integer> dynamic,
+                         List<List<Integer>> result, int index) {
   
     
     if(index==arr.size()){
-      for(Integer z:result){
-        MenuPanel.println(Integer.toString(z));
-      }
-      MenuPanel.println("");
-      return;
+
+      result.add(new ArrayList<>(dynamic));
+      return ;
     }
     
     for(Integer z:arr){
-      if(result.indexOf(z)==-1){
-        result.add(z);
-        recursTest(arr, result, index+1);
-        result.remove(result.size()-1);
+      if(dynamic.indexOf(z)==-1){
+        dynamic.add(z);
+        recursTest(arr, dynamic, result, index+1);
+        dynamic.remove(dynamic.size()-1);
       }
       
     }

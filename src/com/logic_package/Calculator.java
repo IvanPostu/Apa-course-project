@@ -99,8 +99,9 @@ public class Calculator {
     
     ArrayList<Integer> aaa = new ArrayList<>(Arrays.asList(1,2,3));
     
+    List<List<Integer>> t3 = new ArrayList<>();
     
-    searchEngine.recursTest(aaa, new ArrayList<Integer>(), 0 );
+    searchEngine.recursTest(aaa, new ArrayList<Integer>(), t3, 0 );
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
   }
