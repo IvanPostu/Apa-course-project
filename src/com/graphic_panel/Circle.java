@@ -20,7 +20,10 @@ public class Circle {
   }
 
   public void draw(Graphics2D g){
-    g.setColor(Color.green);
+    int alpha = 175; // ~254 = 100%
+    Color myColour = new Color(32, 64, 32, alpha);
+    
+    g.setColor(myColour);
     g.fillOval((int)x, (int)y, RADIUS, RADIUS);
 
   }

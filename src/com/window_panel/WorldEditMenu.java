@@ -10,6 +10,8 @@ public class WorldEditMenu extends JPanel {
   private JCheckBox worldEdit;
   private JCheckBox addWall, addSpace, addBox, addBoxPlace, addRobot;
 
+  private JCheckBox showNumbers;
+  
   private JTextArea txtArea;
   private JScrollPane scrollPaneForTxtArea;
   private JButton clearTxtAreaBtn;
@@ -61,6 +63,12 @@ public class WorldEditMenu extends JPanel {
     addRobot.setSelected(true);
     addRobot.addItemListener((ItemEvent e)->checkboxClickListener(e));
     add(addRobot);
+  
+    showNumbers = new JCheckBox("Show Numbers");
+    showNumbers.setBounds(5, 10+20+25+25+25, 110, 20);
+    showNumbers.setBackground(Color.gray);
+    showNumbers.setSelected(true);
+    add(showNumbers);
 
     txtArea = new JTextArea();
     txtArea.setBackground(Color.lightGray);
@@ -157,6 +165,11 @@ public class WorldEditMenu extends JPanel {
     return this.worldEdit.isSelected();
   }
 
+  public boolean isShowNumbers(){
+    return this.showNumbers.isSelected();
+  }
+  
+  
   public void println(String s) {
     this.txtArea.append(s+"\n");
   }

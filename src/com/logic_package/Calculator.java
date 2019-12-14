@@ -135,17 +135,34 @@ public class Calculator {
         MenuPanel.println("");
       });
       
-      for (int i = 1; i < realCombinations.get(0).size(); i++) {
-        List<Block> pathItems = searchEngine.findPathBetweenTwoPoint(
-                realCombinations.get(0).get(i - 1), realCombinations.get(0).get(i), world);
-  
-        pathItems.forEach(aa -> {
-          pathMark.add(new Circle(aa.arrPos().x, aa.arrPos().y));
-        });
-      }
       
-
+      List<List<Block>> allPath = new ArrayList<>();
       
+      realCombinations.forEach(re -> {
+        List<Block> getList = new ArrayList<Block>();
+        allPath.add(getList);
+        for (int i = 1; i < re.size(); i++) {
+          List<Block> pathItems = searchEngine.findPathBetweenTwoPoint(re.get(i - 1), re.get(i), world);
+          getList.addAll(pathItems);
+        }
+      });
+      
+      allPath.sort(Comparator.comparingInt(List::size));
+      
+      allPath.get(0).forEach(aa ->{
+        pathMark.add(new Circle(aa.arrPos().x, aa.arrPos().y));
+      });
+      
+//      for (int i = 1; i < realCombinations.get(0).size(); i++) {
+//        List<Block> pathItems = searchEngine.findPathBetweenTwoPoint(
+//                realCombinations.get(0).get(i - 1), realCombinations.get(0).get(i), world);
+//
+//        pathItems.forEach(aa -> {
+//          pathMark.add(new Circle(aa.arrPos().x, aa.arrPos().y));
+//        });
+//      }
+      
+    
     }
 
 //    Block a = blocks[3][5];
@@ -179,7 +196,7 @@ public class Calculator {
   
   
   public void draw(Graphics2D g) {
-    if (pathWeight != null) {
+    if (pathWeight != null && MenuPanel.worldEditMenu.isShowNumbers()) {
       for (NumberInBlock n : pathWeight) n.render(g);
     }
     
