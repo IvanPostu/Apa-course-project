@@ -5,6 +5,6 @@ import com.graphic_panel.World;
 
 public interface SearchPathWorker {
 
-  void findFirstObject(World world, int [][]ponderi, int getPondere, int getX, int getY, Material object);
+  void findFirstObject(World world, int [][]weight, int getWeight, int getX, int getY, Material object);
 
 }

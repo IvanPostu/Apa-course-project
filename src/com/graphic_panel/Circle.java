@@ -24,4 +24,12 @@ public class Circle {
     g.fillOval((int)x, (int)y, RADIUS, RADIUS);
 
   }
+
+  public int getIndexX() {
+    return indexX;
+  }
+
+  public int getIndexY() {
+    return indexY;
+  }
 }

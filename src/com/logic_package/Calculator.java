@@ -1,26 +1,33 @@
 package com.logic_package;
 
 import com.graphic_panel.*;
-import com.window_panel.MenuPanel;
+import com.other_package.CustomPair;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
 
 public class Calculator {
 
   List<NumberInBlock> testNumbers;
+  List<Circle> path;
 
+
+
+  /*
+  * TO DO: Block - transitPoint AND get block weight
+  *
+  * */
+  List<CustomPair<Block, Integer>> transitPoint;
 
   public Calculator() {
-    testNumbers = new ArrayList<>();
+    testNumbers = new LinkedList<>();
+    path = new LinkedList<>();
+    transitPoint = new ArrayList<>();
 
-    /*testNumbers.add(new NumberInBlock(0,0,5));
-    testNumbers.add(new NumberInBlock(3,3,215));
-    testNumbers.add(new NumberInBlock(5,2,25));*/
+//    path.add(new Circle(1,1));
+//    path.add(new Circle(1,3));
+
   }
 
   public void calculate(World world)throws Exception{
@@ -29,39 +36,41 @@ public class Calculator {
 
     Block[][] blocks = world.getBlocks();
     Block robot = world.getRobot();
-    List<Block> pPoints = new ArrayList<>();
 
 
 
-    int [][] ponderi  = new int[blocks.length][blocks[0].length];
+    int [][] weight  = new int[blocks.length][blocks[0].length];
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
-        ponderi[i][k] = SearchPathWorkerImpl.INVIS_VAL_FOR_PATH;
+        weight[i][k] = SearchPathWorkerImpl.INVISIBLE_WEIGHT;
       }
     }
 
     SearchPathWorker searchEngine = new SearchPathWorkerImpl();
-    searchEngine.findFirstObject(world, ponderi,0, robot.arrPos().x,
+    searchEngine.findFirstObject(world, weight,0, robot.arrPos().x,
             robot.arrPos().y, Material.BOX);
 
+    /*TO DO:  adds blocks to be passed into a separate array */
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
         if(blocks[i][k].getMaterial()==Material.BOX
-                && ponderi[i][k]!=SearchPathWorkerImpl.INVIS_VAL_FOR_PATH)
-          pPoints.add(blocks[i][k]);
+                && weight[i][ k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT){}
+//          transitPoint.add(blocks[i][k]);
       }
     }
 
 
-    pPoints.forEach(a->{
-      MenuPanel.println(Integer.toString(a.arrPos().x)+" "+Integer.toString(a.arrPos().y));
-    });
+//    transitPoint.forEach( a -> {
+//      MenuPanel.println("Transit point "+
+//              Integer.toString(a.arrPos().x)+" "+Integer.toString(a.arrPos().y));
+//    });
 
 
+    /*TO DO:  conversion weight[][] to an array of type NumberInBlock for show to UI*/
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
-        if(ponderi[i][k]!=SearchPathWorkerImpl.INVIS_VAL_FOR_PATH){
-          testNumbers.add(new NumberInBlock(i,k,ponderi[i][k]));
+        if(weight[i][k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT){
+          testNumbers.add(new NumberInBlock(i,k,weight[i][k]));
         }
       }
     }
@@ -71,7 +80,7 @@ public class Calculator {
 
 
   public void clear(World world)throws Exception{
-    Block blocks[][] = world.getBlocks();
+    Block[][] blocks = world.getBlocks();
 
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
@@ -92,11 +101,12 @@ public class Calculator {
       for (NumberInBlock n : testNumbers) n.render(g);
     }
 
+    if(path!=null){
+      for(Circle c : path) c.draw(g);
+    }
+
+
     double radius = 2.;
-
-    Circle circle = new Circle(1, 1);
-
-    circle.draw(g);
 
   }
 }
