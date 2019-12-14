@@ -1,11 +1,13 @@
 package com.graphic_panel;
 
+import com.window_panel.MenuPanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.VolatileImage;
 
-public class GraphicPanel extends JPanel implements  ComponentListener, ActionListener, KeyListener, MouseListener  {
+public class GraphicPanel extends JPanel implements  ActionListener, KeyListener, MouseListener, MouseMotionListener{
 
     public static final float SCALE = 1.f;
 
@@ -22,7 +24,7 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
         setBounds(x, y, width, height);
         setPreferredSize(new Dimension(width, height));
 
-        addComponentListener(this);
+        addMouseMotionListener(this);
         addMouseListener(this);
         addKeyListener(this);
         setFocusable(true);
@@ -102,7 +104,6 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
     @Override
     public void keyPressed(KeyEvent e) {
         playstate.keyPressed(e, e.getKeyCode());
-
     }
 
     @Override
@@ -110,23 +111,14 @@ public class GraphicPanel extends JPanel implements  ComponentListener, ActionLi
         playstate.keyReleased(e, e.getKeyCode());
     }
 
+
     @Override
-    public void componentResized(ComponentEvent componentEvent) {
+    public void mouseDragged(MouseEvent e) {
 
     }
 
     @Override
-    public void componentMoved(ComponentEvent componentEvent) {
-
-    }
-
-    @Override
-    public void componentShown(ComponentEvent componentEvent) {
-
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent componentEvent) {
-
+    public void mouseMoved(MouseEvent e) {
+        playstate.mouseMoved(e);
     }
 }

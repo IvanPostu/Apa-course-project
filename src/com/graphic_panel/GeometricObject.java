@@ -2,11 +2,11 @@ package com.graphic_panel;
 
 import java.awt.*;
 
-public abstract class GraphicObject {
+public abstract class GeometricObject {
     protected int x, y;
     protected int width, height;
 
-    public GraphicObject(int x, int y, int width, int height) {
+    public GeometricObject(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;

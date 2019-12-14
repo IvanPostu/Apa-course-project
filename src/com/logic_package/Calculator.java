@@ -2,6 +2,7 @@ package com.logic_package;
 
 import com.graphic_panel.*;
 import com.other_package.CustomPair;
+import com.window_panel.MenuPanel;
 
 import java.awt.*;
 import java.util.*;
@@ -9,10 +10,18 @@ import java.util.List;
 
 public class Calculator {
 
-  List<NumberInBlock> testNumbers;
-  List<Circle> path;
 
+  /*
+  * TO DO: path weight array for show to UI
+  *
+  * */
+  private List<NumberInBlock> pathWeight;
 
+  /*
+   *TO DO: mark path
+   *
+   * */
+  private List<Circle> pathMark;
 
   /*
   * TO DO: Block - transitPoint AND get block weight
@@ -21,8 +30,8 @@ public class Calculator {
   List<CustomPair<Block, Integer>> transitPoint;
 
   public Calculator() {
-    testNumbers = new LinkedList<>();
-    path = new LinkedList<>();
+    pathWeight = new LinkedList<>();
+    pathMark = new LinkedList<>();
     transitPoint = new ArrayList<>();
 
 //    path.add(new Circle(1,1));
@@ -32,7 +41,7 @@ public class Calculator {
 
   public void calculate(World world)throws Exception{
 
-    testNumbers.clear();
+    pathWeight.clear();
 
     Block[][] blocks = world.getBlocks();
     Block robot = world.getRobot();
@@ -54,23 +63,24 @@ public class Calculator {
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
         if(blocks[i][k].getMaterial()==Material.BOX
-                && weight[i][ k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT){}
-//          transitPoint.add(blocks[i][k]);
+                && weight[i][k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT)
+          transitPoint.add(new CustomPair<Block, Integer>(blocks[i][k], weight[i][k]));
       }
     }
 
 
-//    transitPoint.forEach( a -> {
-//      MenuPanel.println("Transit point "+
-//              Integer.toString(a.arrPos().x)+" "+Integer.toString(a.arrPos().y));
-//    });
+    transitPoint.forEach( a -> {
+      MenuPanel.println("Transit point "+
+              Integer.toString(a.getFirst().arrPos().x)+" "+
+              Integer.toString(a.getFirst().arrPos().y));
+    });
 
 
     /*TO DO:  conversion weight[][] to an array of type NumberInBlock for show to UI*/
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
         if(weight[i][k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT){
-          testNumbers.add(new NumberInBlock(i,k,weight[i][k]));
+          pathWeight.add(new NumberInBlock(i,k,weight[i][k]));
         }
       }
     }
@@ -89,7 +99,7 @@ public class Calculator {
       }
     }
 
-    testNumbers.clear();
+    pathWeight.clear();
 
 
 
@@ -97,12 +107,12 @@ public class Calculator {
 
 
   public void draw(Graphics2D g) {
-    if(testNumbers!=null) {
-      for (NumberInBlock n : testNumbers) n.render(g);
+    if(pathWeight !=null) {
+      for (NumberInBlock n : pathWeight) n.render(g);
     }
 
-    if(path!=null){
-      for(Circle c : path) c.draw(g);
+    if(pathMark !=null){
+      for(Circle c : pathMark) c.draw(g);
     }
 
 

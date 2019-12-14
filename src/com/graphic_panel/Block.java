@@ -7,7 +7,7 @@ import com.MainWindow;
 import java.awt.*;
 
 
-public class Block extends GraphicObject {
+public class Block extends GeometricObject {
 
   private Material material;
 
