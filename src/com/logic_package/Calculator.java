@@ -27,7 +27,7 @@ public class Calculator {
   * TO DO: Block - transitPoint
   *
   * */
-  List<Block> transitPoint;
+  ArrayList<Block> transitPoint;
 
   public Calculator() {
     pathWeight = new LinkedList<>();
@@ -84,6 +84,24 @@ public class Calculator {
       }
     }
 
+    
+    /*
+    * TO DO:
+    *   TEST
+    * */
+    
+    transitPoint.add(robot);
+    
+//    searchEngine.connectTransitPoints(transitPoint, 0);
+    
+    
+    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    
+    ArrayList<Integer> aaa = new ArrayList<>(Arrays.asList(1,2,3));
+    
+    
+    searchEngine.recursTest(aaa, new ArrayList<Integer>(), 0 );
+    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
   }
 
