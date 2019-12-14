@@ -93,7 +93,21 @@ public class World {
 
   }
 
-  public void worldMouseMoved(int x, int y, final Boolean leftPressed, final Boolean rightPressed) {
+  public void worldMouseDragged(final int x, final int y,
+                                final boolean leftMouseButtonClick, final boolean rightMouseButtonClick) {
+
+    if (MenuPanel.worldEditMenu.isAddWall() && leftMouseButtonClick) {
+      Block block = getBlock(x, y);
+      if (block.getMaterial() != Material.WALL && block.getMaterial() != Material.ROBOT)
+        block.setMaterial(Material.WALL);
+    }
+
+    if (rightMouseButtonClick) {
+      Block block = getBlock(x, y);
+      if (block.getMaterial() != Material.AIR && block.getMaterial() != Material.ROBOT)
+        block.setMaterial(Material.AIR);
+    }
+
 
   }
 

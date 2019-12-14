@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/Calculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/GraphicPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/GraphicPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

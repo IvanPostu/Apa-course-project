@@ -18,14 +18,11 @@ public class Playstate {
 
   private World world;
   private Calculator calculator;
-  private Boolean leftMouseButtonIsPressed;
-  private Boolean rightMouseButtonIsPressed;
+
 
   public Playstate() {
     world = new World();
     calculator = new Calculator();
-    rightMouseButtonIsPressed = false;
-    leftMouseButtonIsPressed = false;
 
 
     JButton runBtn = MainWindow.menuPanel.getRunButton();
@@ -102,53 +99,40 @@ public class Playstate {
     int x = e.getX();
     int y = e.getY();
 
-    if (e.getButton() == MouseEvent.BUTTON3) {
-      rightMouseButtonIsPressed = true;
-    }
-    if (e.getButton() == MouseEvent.BUTTON1) {
-      leftMouseButtonIsPressed = true;
-    }
 
     //String s  = String.format("x=%d, y=%d", x, y);
     //System.out.println(s);
 
-    if (MenuPanel.worldEditMenu.isWorldEdit()
-            && x > World.DIST_TO_00 && x < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)
-            && y > World.DIST_TO_00 && y < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)) {
-
+    if (insideWorldCoordinatesAndWorldEditMode(x, y)) {
       world.worldMouseKeyPresed(x, y);
-
     }
 
 
   }
 
   public void mouseReleased(MouseEvent e) {
-    if (e.getButton() == MouseEvent.BUTTON3) {
-      rightMouseButtonIsPressed = false;
-    }
-    if (e.getButton() == MouseEvent.BUTTON1) {
-      leftMouseButtonIsPressed = false;
-    }
+
   }
 
   public void mouseMoved(MouseEvent e) {
+
+  }
+
+  public void mouseDragged(MouseEvent e) {
+
     int x = e.getX();
     int y = e.getY();
 
-    if (MenuPanel.worldEditMenu.isWorldEdit()
-            && x > World.DIST_TO_00 && x < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)
-            && y > World.DIST_TO_00 && y < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)) {
-
-      world.worldMouseMoved(x, y, leftMouseButtonIsPressed, rightMouseButtonIsPressed);
-
+    if (insideWorldCoordinatesAndWorldEditMode(x, y)) {
+      world.worldMouseDragged(x, y,SwingUtilities.isLeftMouseButton(e), SwingUtilities.isRightMouseButton(e));
     }
 
 
-//    String s = "x: " + Integer.toString(e.getX()) + " - y:" + Integer.toString(e.getY()) +
-//            " btn: " + Integer.toString(e.getButton());
-
-//    MenuPanel.println(s);
   }
 
+  private boolean insideWorldCoordinatesAndWorldEditMode(final int x, final int y) {
+    return (MenuPanel.worldEditMenu.isWorldEdit()
+            && x > World.DIST_TO_00 && x < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)
+            && y > World.DIST_TO_00 && y < World.DIST_TO_00 + (World.BLOCKS * MainWindow.BLOCKSIZE)) ;
+  }
 }

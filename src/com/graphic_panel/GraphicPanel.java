@@ -114,7 +114,7 @@ public class GraphicPanel extends JPanel implements  ActionListener, KeyListener
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        playstate.mouseDragged(e);
     }
 
     @Override
