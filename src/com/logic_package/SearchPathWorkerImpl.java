@@ -101,7 +101,19 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
   public void connectTransitPoints(final ArrayList<Block> arr, ArrayList<Block> dynamic,
                                      List<List<Block>> result, int index) {
   
+    if(arr.size()==index){
+      result.add(new ArrayList<>(dynamic));
+      return ;
+    }
     
+    for(Block b : arr){
+      if(dynamic.indexOf(b)==-1){
+        dynamic.add(b);
+//        recursTest(arr, dynamic, result, index+1);
+        connectTransitPoints(arr, dynamic, result, index+1);
+        dynamic.remove(dynamic.size()-1);
+      }
+    }
     
   }
   

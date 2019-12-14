@@ -7,6 +7,7 @@ import com.window_panel.MenuPanel;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Calculator {
 
@@ -42,6 +43,8 @@ public class Calculator {
   public void calculate(World world)throws Exception{
 
     pathWeight.clear();
+    pathMark.clear();
+    transitPoint.clear();
 
     Block[][] blocks = world.getBlocks();
     Block robot = world.getRobot();
@@ -87,22 +90,52 @@ public class Calculator {
     
     /*
     * TO DO:
-    *   TEST
+    *
+    * 1) adds all elements and robot to the array
+    * var transitPoint
+    *
+    * 2) creates a two-dimensional array with all possible paths
+    * var possibleCombinations
+    *
+    * IMPORTANT:
+    *
+    * From the array you need to remove the elements in which the robot
+    * is not at the beginning or at the end
+    *
     * */
     
     transitPoint.add(robot);
+    List<List<Block>> possibleCombinations = new ArrayList<>();
     
-//    searchEngine.connectTransitPoints(transitPoint, 0);
-    
-    
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-    
-    ArrayList<Integer> aaa = new ArrayList<>(Arrays.asList(1,2,3));
-    
-    List<List<Integer>> t3 = new ArrayList<>();
-    
-    searchEngine.recursTest(aaa, new ArrayList<Integer>(), t3, 0 );
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    searchEngine.connectTransitPoints(transitPoint, new ArrayList<>(), possibleCombinations, 0);
+  
+    MenuPanel.println("Possible comb.:");
+    if(possibleCombinations.size()>0){
+      possibleCombinations.forEach(a->{
+        for(Block b : a){
+          String s = Integer.toString(b.arrPos().x)+" - "+Integer.toString(b.arrPos().y);
+          MenuPanel.println(s);
+        }
+        MenuPanel.println("");
+      });
+    }
+  
+    List<List<Block>> realCombinations = possibleCombinations
+            .stream()
+//            .filter(a -> a.get(0)==robot||a.get(a.size()-1)==robot)
+            .filter(a -> a.get(0)==robot)
+            .collect(Collectors.toList());
+  
+    MenuPanel.println("Real comb.:");
+    if(realCombinations.size()>0){
+      realCombinations.forEach(a->{
+        for(Block b : a){
+          String s = Integer.toString(b.arrPos().x)+" - "+Integer.toString(b.arrPos().y);
+          MenuPanel.println(s);
+        }
+        MenuPanel.println("");
+      });
+    }
 
   }
 
@@ -135,7 +168,6 @@ public class Calculator {
     }
 
 
-    double radius = 2.;
 
   }
 }
