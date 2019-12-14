@@ -19,7 +19,7 @@ public interface SearchPathWorker {
                             List<List<Block>> result, int index);
   
   
-  List<Block> findPathBetweenTwoPoint(Block A, Block B);
+  List<Block> findPathBetweenTwoPoint(Block A, Block B, World world);
   
   
   
