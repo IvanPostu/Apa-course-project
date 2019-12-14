@@ -17,7 +17,7 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
 
   //TO DO: right top left right...
   @Override
-  public void findFirstObject(World world, int[][] weight, int getWeight, int getX, int getY, Material object) {
+  public void findAllPathWeight(World world, int[][] weight, int getWeight, int getX, int getY) {
     final int maxX = weight.length;
     final int maxY = weight[0].length;
     Block blocks[][] = world.getBlocks();
@@ -30,14 +30,14 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
       if (weight[getX + 1][getY] > getWeight + DIR_WEIGHT) {
         if (blocks[getX + 1][getY].getMaterial() != Material.WALL) {
           weight[getX + 1][getY] = getWeight + DIR_WEIGHT;
-          findFirstObject(world, weight, getWeight + DIR_WEIGHT, getX + 1, getY, object);
+          findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX + 1, getY);
         }
       }
       if (getY < maxY - 1) {
         if (weight[getX + 1][getY + 1] > getWeight + CORNER_WEIGHT) {
           if (blocks[getX + 1][getY + 1].getMaterial() != Material.WALL) {
             weight[getX + 1][getY + 1] = getWeight + CORNER_WEIGHT;
-            findFirstObject(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY + 1, object);
+            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY + 1);
           }
         }
       }
@@ -45,7 +45,7 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
         if (weight[getX + 1][getY - 1] > getWeight + CORNER_WEIGHT) {
           if (blocks[getX + 1][getY - 1].getMaterial() != Material.WALL) {
             weight[getX + 1][getY - 1] = getWeight + CORNER_WEIGHT;
-            findFirstObject(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY - 1, object);
+            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY - 1);
           }
         }
       }
@@ -55,14 +55,14 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
       if (weight[getX - 1][getY] > getWeight + DIR_WEIGHT) {
         if (blocks[getX - 1][getY].getMaterial() != Material.WALL) {
           weight[getX - 1][getY] = getWeight + DIR_WEIGHT;
-          findFirstObject(world, weight, getWeight + DIR_WEIGHT, getX - 1, getY, object);
+          findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX - 1, getY);
         }
       }
       if (getY < maxY - 1) {
         if (weight[getX - 1][getY + 1] > getWeight + CORNER_WEIGHT) {
           if (blocks[getX - 1][getY + 1].getMaterial() != Material.WALL) {
             weight[getX - 1][getY + 1] = getWeight + CORNER_WEIGHT;
-            findFirstObject(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY + 1, object);
+            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY + 1);
           }
         }
       }
@@ -70,7 +70,7 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
         if (weight[getX - 1][getY - 1] > getWeight + CORNER_WEIGHT) {
           if (blocks[getX - 1][getY - 1].getMaterial() != Material.WALL) {
             weight[getX - 1][getY - 1] = getWeight + CORNER_WEIGHT;
-            findFirstObject(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY - 1, object);
+            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY - 1);
           }
         }
       }
@@ -80,13 +80,13 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
     if (getY < maxY - 1 && weight[getX][getY + 1] > getWeight + DIR_WEIGHT) {
       if (blocks[getX][getY + 1].getMaterial() != Material.WALL) {
         weight[getX][getY + 1] = getWeight + DIR_WEIGHT;
-        findFirstObject(world, weight, getWeight + DIR_WEIGHT, getX, getY + 1, object);
+        findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX, getY + 1);
       }
     }
     if (getY > 0 && weight[getX][getY - 1] > getWeight + DIR_WEIGHT) {
       if (blocks[getX][getY - 1].getMaterial() != Material.WALL) {
         weight[getX][getY - 1] = getWeight + DIR_WEIGHT;
-        findFirstObject(world, weight, getWeight + DIR_WEIGHT, getX, getY - 1, object);
+        findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX, getY - 1);
       }
     }
 

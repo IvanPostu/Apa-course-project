@@ -2,11 +2,11 @@ package com.other_package;
 
 /*
 * TO DO: OpenJdk 12 has no implementation for Pair class
-*
+*         my implementation
 * */
 public class CustomPair<F, S> {
-  private  F first;
-  private  S second;
+  private F first;
+  private S second;
 
 
   public CustomPair(F first, S second) {

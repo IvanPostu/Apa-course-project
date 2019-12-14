@@ -24,10 +24,10 @@ public class Calculator {
   private List<Circle> pathMark;
 
   /*
-  * TO DO: Block - transitPoint AND get block weight
+  * TO DO: Block - transitPoint
   *
   * */
-  List<CustomPair<Block, Integer>> transitPoint;
+  List<Block> transitPoint;
 
   public Calculator() {
     pathWeight = new LinkedList<>();
@@ -56,23 +56,22 @@ public class Calculator {
     }
 
     SearchPathWorker searchEngine = new SearchPathWorkerImpl();
-    searchEngine.findFirstObject(world, weight,0, robot.arrPos().x,
-            robot.arrPos().y, Material.BOX);
+    searchEngine.findAllPathWeight(world, weight,0, robot.arrPos().x, robot.arrPos().y);
 
     /*TO DO:  adds blocks to be passed into a separate array */
     for(int i=0; i<blocks.length; i++){
       for(int k=0; k<blocks[0].length; k++){
         if(blocks[i][k].getMaterial()==Material.BOX
                 && weight[i][k]!=SearchPathWorkerImpl.INVISIBLE_WEIGHT)
-          transitPoint.add(new CustomPair<Block, Integer>(blocks[i][k], weight[i][k]));
+          transitPoint.add(blocks[i][k]);
       }
     }
 
 
     transitPoint.forEach( a -> {
       MenuPanel.println("Transit point "+
-              Integer.toString(a.getFirst().arrPos().x)+" "+
-              Integer.toString(a.getFirst().arrPos().y));
+              Integer.toString(a.arrPos().x)+" "+
+              Integer.toString(a.arrPos().y));
     });
 
 
@@ -100,7 +99,8 @@ public class Calculator {
     }
 
     pathWeight.clear();
-
+    pathMark.clear();
+    transitPoint.clear();
 
 
   }
