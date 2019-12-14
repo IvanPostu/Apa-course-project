@@ -71,11 +71,11 @@ public class Calculator {
     }
 
 
-    transitPoint.forEach( a -> {
+    /*transitPoint.forEach( a -> {
       MenuPanel.println("Transit point "+
               Integer.toString(a.arrPos().x)+" "+
               Integer.toString(a.arrPos().y));
-    });
+    });*/
 
 
     /*TO DO:  conversion weight[][] to an array of type NumberInBlock for show to UI*/
@@ -109,7 +109,7 @@ public class Calculator {
     
     searchEngine.connectTransitPoints(transitPoint, new ArrayList<>(), possibleCombinations, 0);
   
-    MenuPanel.println("Possible comb.:");
+    /*MenuPanel.println("Possible comb.:");
     if(possibleCombinations.size()>0){
       possibleCombinations.forEach(a->{
         for(Block b : a){
@@ -118,7 +118,7 @@ public class Calculator {
         }
         MenuPanel.println("");
       });
-    }
+    }*/
   
     List<List<Block>> realCombinations = possibleCombinations
             .stream()
@@ -126,7 +126,7 @@ public class Calculator {
             .filter(a -> a.get(0)==robot)
             .collect(Collectors.toList());
   
-    MenuPanel.println("Real comb.:");
+    MenuPanel.println("Real comb ("+Integer.toString(realCombinations.size())+") :");
     if(realCombinations.size()>0){
       realCombinations.forEach(a->{
         for(Block b : a){

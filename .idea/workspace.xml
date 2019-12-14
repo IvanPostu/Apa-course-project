@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/apa_project/com/logic_package/SearchPathWorkerImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

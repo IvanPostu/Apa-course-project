@@ -19,16 +19,9 @@ public interface SearchPathWorker {
                             List<List<Block>> result, int index);
   
   
-  /*
-  * TO DO: TEST METHOD
-  * recursively passes through an array and saves all possible combinations
-  *
-  * Example:
-  *       ArrayList<Integer> aaa = new ArrayList<>(Arrays.asList(1,2,3));
-          List<List<Integer>> t3 = new ArrayList<>();
-          searchEngine.recursTest(aaa, new ArrayList<Integer>(), t3, 0 );
-  * */
-  void recursTest(final ArrayList<Integer>arr, ArrayList<Integer>dynamic,
-                  List<List<Integer>> result, int index);
+  List<Block> findPathBetweenTwoPoint(Block A, Block B);
   
+  
+  
+
 }
