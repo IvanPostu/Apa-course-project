@@ -55,9 +55,9 @@ public class WorldEditMenu extends JPanel {
     addBoxPlace.setBackground(Color.red);
     addBoxPlace.setSelected(false);
     addBoxPlace.addItemListener((ItemEvent e)->checkboxClickListener(e));
-    add(addBoxPlace);
+//    add(addBoxPlace);
 
-    addRobot = new JCheckBox("Add Robot");
+    addRobot = new JCheckBox("Move Robot");
     addRobot.setBounds(5, 10+20+25+25, 95, 20);
     addRobot.setBackground(Color.gray);
     addRobot.setSelected(true);
@@ -122,12 +122,14 @@ public class WorldEditMenu extends JPanel {
         for (JCheckBox item: arr) {
           item.setVisible(false);
         }
+        showNumbers.setVisible(false);
         scrollPaneForTxtArea.setVisible(true);
         clearTxtAreaBtn.setVisible(true);
       }else{
         for (JCheckBox item: arr) {
           item.setVisible(true);
         }
+        showNumbers.setVisible(true);
         scrollPaneForTxtArea.setVisible(false);
         clearTxtAreaBtn.setVisible(false);
       }

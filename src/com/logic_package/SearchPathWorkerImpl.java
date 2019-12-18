@@ -154,66 +154,38 @@ public class SearchPathWorkerImpl implements SearchPathWorker {
     
     //full right
     if (getX < maxX - 1) {
-//      if (weight[getX + 1][getY] > getWeight + DIR_WEIGHT) {
-//        if (blocks[getX + 1][getY].getMaterial() != Material.WALL) {
-//          findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX + 1, getY);
-//        }
-//      }
+
       possibleVariants.add(blocks[getX + 1][getY]);
       if (getY < maxY - 1) {
-//        if (weight[getX + 1][getY + 1] > getWeight + CORNER_WEIGHT) {
-//          if (blocks[getX + 1][getY + 1].getMaterial() != Material.WALL) {
-//            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY + 1);
-//          }
-//        }
+
         possibleVariants.add(blocks[getX + 1][getY + 1]);
       }
       if (getY > 0) {
-//        if (weight[getX + 1][getY - 1] > getWeight + CORNER_WEIGHT) {
-////          if (blocks[getX + 1][getY - 1].getMaterial() != Material.WALL) {
-////            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX + 1, getY - 1);
-////          }
-////        }
+
         possibleVariants.add(blocks[getX + 1][getY - 1]);
       }
     }
     //full left
     if (getX > 0) {
-//      if (weight[getX - 1][getY] > getWeight + DIR_WEIGHT) {
-//        if (blocks[getX - 1][getY].getMaterial() != Material.WALL) {
-//          findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX - 1, getY);
-//        }
-//      }
+
       possibleVariants.add(blocks[getX - 1][getY]);
       if (getY < maxY - 1) {
-//        if (weight[getX - 1][getY + 1] > getWeight + CORNER_WEIGHT) {
-//          if (blocks[getX - 1][getY + 1].getMaterial() != Material.WALL) {
-//            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY + 1);
-//          }
-//        }
+
         possibleVariants.add(blocks[getX - 1][getY + 1]);
       }
       if (getY > 0) {
-//        if (weight[getX - 1][getY - 1] > getWeight + CORNER_WEIGHT) {
-//          if (blocks[getX - 1][getY - 1].getMaterial() != Material.WALL) {
-//            findAllPathWeight(world, weight, getWeight + CORNER_WEIGHT, getX - 1, getY - 1);
-//          }
-//        }
+
         possibleVariants.add(blocks[getX - 1][getY - 1]);
       }
     }
     
     //top and bottom
     if (getY < maxY - 1) {
-//      if (blocks[getX][getY + 1].getMaterial() != Material.WALL) {
-//        findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX, getY + 1);
-//      }
+
       possibleVariants.add(blocks[getX][getY + 1]);
     }
     if (getY > 0) {
-//      if (blocks[getX][getY - 1].getMaterial() != Material.WALL) {
-//        findAllPathWeight(world, weight, getWeight + DIR_WEIGHT, getX, getY - 1);
-//      }
+
       possibleVariants.add(blocks[getX][getY - 1]);
     }
     

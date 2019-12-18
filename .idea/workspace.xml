@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

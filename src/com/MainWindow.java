@@ -26,7 +26,7 @@ public class MainWindow extends JFrame {
         add(menuPanel);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Main Window");
+        setTitle("Path F1nder");
         setSize(new Dimension(800, 600));
         setResizable(false);
         setLocationRelativeTo(null);
