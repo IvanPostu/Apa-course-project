@@ -2,12 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93fc6c32-5838-4f7b-a6d8-4f83e4d49edf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apa_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/apa_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/GeometricObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/GeometricObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/GraphicPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/GraphicPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/NumberInBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/NumberInBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/Playstate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/graphic_panel/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/graphic_panel/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/logic_package/SearchPathWorkerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/other_package/CustomPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/other_package/CustomPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/other_package/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/other_package/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/other_package/Spritesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/other_package/Spritesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/MenuPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/window_panel/WorldEditMenu.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,20 +44,14 @@
   </component>
   <component name="ProjectId" id="1UwQ6s4KoJAuRrnkEY3W3PlGOVy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -85,5 +98,43 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="526" y="276" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580855826761">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="526" y="276" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1580855826761" />
+    <state width="1324" height="230" key="GridCell.Tab.0.bottom" timestamp="1580856405818">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1580856405818" />
+    <state width="1324" height="230" key="GridCell.Tab.0.center" timestamp="1580856405813">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1580856405813" />
+    <state width="1324" height="230" key="GridCell.Tab.0.left" timestamp="1580856405812">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1580856405812" />
+    <state width="1324" height="230" key="GridCell.Tab.0.right" timestamp="1580856405817">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1580856405817" />
+    <state width="1324" height="230" key="GridCell.Tab.1.bottom" timestamp="1580856405134">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1580856405134" />
+    <state width="1324" height="230" key="GridCell.Tab.1.center" timestamp="1580856405131">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1580856405131" />
+    <state width="1324" height="230" key="GridCell.Tab.1.left" timestamp="1580856405129">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1580856405129" />
+    <state width="1324" height="230" key="GridCell.Tab.1.right" timestamp="1580856405132">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="230" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1580856405132" />
   </component>
 </project>
